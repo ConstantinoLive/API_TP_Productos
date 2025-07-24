@@ -1,0 +1,6 @@
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Dominio\bin\Debug\Dominio.dll
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Dominio\bin\Debug\Dominio.pdb
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Dominio\obj\Debug\Dominio.dll
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Dominio\obj\Debug\Dominio.pdb

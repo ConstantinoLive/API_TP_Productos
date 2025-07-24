@@ -1,0 +1,9 @@
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\bin\Debug\Negocio.dll
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\bin\Debug\Negocio.pdb
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\bin\Debug\Dominio.dll
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\bin\Debug\Dominio.pdb
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\obj\Debug\Negocio.dll
+D:\Estudio\UTN\Programacion III Ejercicios\TP\TP_API\Negocio\obj\Debug\Negocio.pdb
