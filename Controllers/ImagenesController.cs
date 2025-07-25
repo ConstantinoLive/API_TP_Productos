@@ -30,24 +30,58 @@ namespace TP_API_Producto.Controllers
         }
 
         // POST: api/Imagenes
-        public void Post([FromBody]ImagenesDTO img)
+        public HttpResponseMessage Post([FromBody]ImagenesDTO img)
         {
-            ImagenesDatos negocio = new ImagenesDatos();
+            try
+            {
+                ImagenesDatos negocio = new ImagenesDatos();
+                ArticuloDatos artNegocio = new ArticuloDatos();
+
+                Articulo articulo = artNegocio.listar().FirstOrDefault(a => a.IdProductos == img.IdArticulo);
+
+                if (articulo == null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, "El artículo no existe.");
+                }
+
+                negocio.ingresarUrl(img.ImagenUrl, img.IdArticulo);
+
+                return Request.CreateResponse(HttpStatusCode.Created, "Imagen agregada correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Error al agregar la imagen: " + ex.Message);
+            }
             
-            negocio.ingresarUrl (img.ImagenUrl, img.IdArticulo);
         }
 
         // PUT: api/Imagenes/5
-        public void Put(int id, [FromBody]ImagenesDTO img)
+        public HttpResponseMessage Put(int id, [FromBody]ImagenesDTO img)
         {
-            ImagenesDatos negocio = new ImagenesDatos();
-            Imagenes imagenExistente = new Imagenes();
-            imagenExistente.id = id;
-            imagenExistente.IdArticulo = img.IdArticulo;
-            imagenExistente.ImagenUrl = img.ImagenUrl;
-                       
+            try
+            {
+                ImagenesDatos negocio = new ImagenesDatos();
+                ArticuloDatos ArtNegocio = new ArticuloDatos();
 
-            negocio.ModificarImagen(imagenExistente.id, imagenExistente.ImagenUrl);
+                Imagenes imagenExistente = new Imagenes();
+                Articulo articulo = ArtNegocio.listar().FirstOrDefault(a => a.IdProductos == img.IdArticulo);
+
+                if (articulo == null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, "El artículo no existe.");
+                }
+                imagenExistente.id = id;
+                imagenExistente.IdArticulo = img.IdArticulo;
+                imagenExistente.ImagenUrl = img.ImagenUrl;
+
+                
+                negocio.ModificarImagen(imagenExistente.id, imagenExistente.ImagenUrl);
+                return Request.CreateResponse(HttpStatusCode.OK, "Imagen modificada correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Error al modificar la imagen: " + ex.Message);
+            }
         }
 
         // DELETE: api/Imagenes/5
